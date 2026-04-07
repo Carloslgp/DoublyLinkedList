@@ -1,16 +1,22 @@
 #pragma once
-#include "Node.hpp"
 
 template<typename T>
 class DoublyLinkedList{
 
     private:
 
-        Node<T>*  head;
-        Node<T>* tail;
+        struct Node {
+            T data;
+            Node* next;
+            Node* previous;
+            Node(const T& value) : data(value), next(nullptr), previous(nullptr) {}
+        };
+
+        Node*  head;
+        Node* tail;
         size_t size;
 
-        Node<T>* getNodeAt(size_t index);
+        Node* getNodeAt(size_t index);
     
     public:
 
@@ -26,7 +32,7 @@ class DoublyLinkedList{
 
         void remove(size_t index);
 
-        const Node<T>* find(const T& value);
+        size_t find(const T& value);
 
 };
 
