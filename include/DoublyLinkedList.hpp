@@ -10,6 +10,7 @@ class DoublyLinkedList{
             Node* next;
             Node* previous;
             Node(const T& value) : data(value), next(nullptr), previous(nullptr) {}
+            ~Node(){}
         };
 
         Node*  head;
