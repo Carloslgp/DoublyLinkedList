@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 
 template<typename T>
 class DoublyLinkedList{
@@ -23,8 +24,6 @@ class DoublyLinkedList{
 
         DoublyLinkedList();
 
-        ~DoublyLinkedList();
-    
         void pushFront(const T& value);
 
         void pushBack(const T& value);
@@ -35,7 +34,8 @@ class DoublyLinkedList{
 
         size_t find(const T& value);
 
+        void printNodes();
+
 };
-
-
+#include "../src/DoublyLinkedList.inl"
 
